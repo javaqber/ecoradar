@@ -1,0 +1,17 @@
+version: "3.8"
+
+services:
+  db:
+    image: postgis/postgis:15-3.3 # <--- AQUÍ le decimos qué imagen bajar de internet
+    container_name: ecoradar-db
+    ports:
+      - "5433:5432" # <--- El Puerto (Tu PC : El Contenedor)
+    environment:
+      POSTGRES_DB: ecoradar_db # <--- Nombre de la Base de Datos
+      POSTGRES_USER: admin # <--- Usuario
+      POSTGRES_PASSWORD: admin # <--- Contraseña
+    volumes:
+      - postgres_data:/var/lib/postgresql/data # <--- Para que los datos no se borren al apagar
+
+volumes:
+  postgres_data:
