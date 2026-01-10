@@ -3,6 +3,7 @@ package com.javaqber.ecoradar.model;
 import jakarta.persistence.*;
 import lombok.*;
 import org.locationtech.jts.geom.Point;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 @Entity
 @Table(name = "spots")
@@ -29,5 +30,21 @@ public class Spot {
     // (GPS mundial)"
     @Column(columnDefinition = "geometry(Point, 4326)")
     private Point ubicacion;
+
+    // PARCHE DE SEGURIDAD
+    // Se sobreescribe el getter de Lombok para forzar el bloqueo de Jackson.
+    // Si no se pone esto, Jackson usa el getter automático y falla.
+    @JsonIgnore
+    public Point getUbicacion() {
+        return this.ubicacion;
+    }
+
+    public double getLatitud() {
+        return this.ubicacion.getY();
+    }
+
+    public double getLongitud() {
+        return this.ubicacion.getX();
+    }
 
 }
