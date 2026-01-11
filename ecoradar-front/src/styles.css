@@ -1,0 +1,10 @@
+/* You can add global styles to this file, and also import other style files */
+/* Importamos los estilos de Leaflet */
+@import "leaflet/dist/leaflet.css";
+
+/* Reset básico para que la app ocupe toda la pantalla */
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
