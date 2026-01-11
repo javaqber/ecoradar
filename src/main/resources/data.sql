@@ -15,7 +15,12 @@ INSERT INTO spots (nombre, descripcion, categoria, ubicacion)
 VALUES ('Cargador Tesla', 'Carga rápida para eléctricos.', 'Energía', 
 ST_SetSRID(ST_MakePoint(-3.6920, 40.4470), 4326));
 
--- 4. Punto en Barcelona
+-- 4. Punto en Sevilla
 INSERT INTO spots (nombre, descripcion, categoria, ubicacion) 
-VALUES ('Punto Limpio BCN', 'Centro de residuos.', 'Reciclaje', 
-ST_SetSRID(ST_MakePoint(2.1734, 41.3851), 4326));
+VALUES ('Urbanizacion Echaguy.', 'Entrenúcleos', 'Vivienda', 
+ST_SetSRID(ST_MakePoint(-5.928282515470928, 37.31060833424005), 4326));
+
+-- 5. Punto en Dos Hermanas (Entrenúcleos)
+INSERT INTO spots (nombre, descripcion, categoria, ubicacion) 
+VALUES ('Torre Panorámica', 'Entrenúcleos', 'Urbanismo', 
+ST_SetSRID(ST_MakePoint(-5.9347222222222, 37.309722222222), 4326));
