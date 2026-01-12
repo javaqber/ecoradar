@@ -70,8 +70,8 @@ export class MapComponent implements OnInit {
   }
 
   private loadSpots(): void {
-    // Buscamos puntos a 2000 metros de la ubicación actual
-    this.spotService.getSpotsNear(this.lat, this.lon, 60000)
+    // Buscamos puntos a 50 Km de la ubicación actual
+    this.spotService.getSpotsNear(this.lat, this.lon, 5000)
       .subscribe({
         next: (data: SpotTs[]) => {
           this.addMarkers(data);
