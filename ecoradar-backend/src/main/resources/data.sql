@@ -35,6 +35,14 @@ VALUES (
 
 
 -- PARQUES URBANOS (ZONAS VERDES)
+INSERT INTO spots (nombre, descripcion, categoria, ubicacion)
+VALUES (
+  'Parque Forestal Dehesa de Doña María',
+  'Parque forestal periurbano con senderos, arbolado mediterráneo y función ecológica en Entrenúcleos',
+  'Parque Urbano',
+  ST_SetSRID(ST_MakePoint(-5.937900, 37.274600), 4326)
+);
+
 INSERT INTO spots (nombre, descripcion, categoria, ubicacion) 
 VALUES (
     'El Pensador', 
@@ -236,6 +244,14 @@ VALUES (
 
 
 -- FUENTES PÚBLICAS
+INSERT INTO spots (nombre, descripcion, categoria, ubicacion)
+VALUES (
+  'Lago de la Vida',
+  'Lago artificial y zona verde junto a la Universidad Loyola, espacio de biodiversidad y ocio sostenible',
+  'Espacio Natural',
+  ST_SetSRID(ST_MakePoint(-5.928400, 37.319200), 4326)
+);
+
 INSERT INTO spots (nombre, descripcion, categoria, ubicacion)
 VALUES (
   'Fuente Pública Alameda de Hércules',
