@@ -4,6 +4,8 @@ Este proyecto es una aplicación **Full Stack Geoespacial** diseñada para local
 
 El sistema utiliza **PostGIS** para realizar cálculos espaciales complejos y **Angular** para renderizar mapas interactivos, todo respaldado por una arquitectura robusta en **Spring Boot**.
 
+![ecoradar_demo](https://github.com/user-attachments/assets/5ce8042e-7607-4bfe-9d71-a3737deb789b)
+
 ## 🏗️ Arquitectura
 
 El sistema sigue una arquitectura de Monorepo con 3 capas principales:
